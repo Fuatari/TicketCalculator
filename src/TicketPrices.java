@@ -9,6 +9,10 @@ public class TicketPrices {
 		return customer;
 	}
 
+	public void addCustomerType(int id, Customer customer) {
+		ticketMap.put(id, customer);
+	}
+
 	public void setTicketPrices() {
 		addCustomerType(1, createCustomer("Standard", 8));
 		addCustomerType(2, createCustomer("OAP", 6));
@@ -16,8 +20,14 @@ public class TicketPrices {
 		addCustomerType(4, createCustomer("Child", 4));
 	}
 
-	public void addCustomerType(int id, Customer customer) {
-		ticketMap.put(id, customer);
+	public void printPrices() {
+		System.out.println(ticketMap.toString());
+	}
+
+	public void printPrettyPrices() {
+		for (int i = 1; i <= ticketMap.size(); i++) {
+			System.out.println("(" + i + ") " + ticketMap.get(i).getType() + ": ’" + ticketMap.get(i).getPrice());
+		}
 	}
 
 	public int getCustomerPrice(String type) {

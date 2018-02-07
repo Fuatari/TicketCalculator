@@ -27,6 +27,6 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "[ Customer type = " + type + ", Ticket price=" + price + " ]";
+		return "[Customer type = " + type + ", Ticket price= " + price + "]\n";
 	}
 }
