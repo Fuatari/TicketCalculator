@@ -1,25 +1,34 @@
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.Assert.assertEquals;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 class TicketPricesTest {
 
-	TicketPrices price = new TicketPrices();
+	static TicketPrices prices = new TicketPrices();
+
+	@BeforeAll
+	static void beforeAll() {
+		prices.setTicketPrices();
+	}
 
 	@Test
 	void confirmStandardPrice() {
-		fail("TBA");
+		assertEquals(8, prices.getCustomerPrice("Standard"));
 	}
 
+	@Test
 	void confirmOAPPrice() {
-		fail("TBA");
+		assertEquals(6, prices.getCustomerPrice("OAP"));
 	}
 
+	@Test
 	void confirmStudentPrice() {
-		fail("TBA");
+		assertEquals(6, prices.getCustomerPrice("Student"));
 	}
 
+	@Test
 	void confirmChildPrice() {
-		fail("TBA");
+		assertEquals(4, prices.getCustomerPrice("Child"));
 	}
 }

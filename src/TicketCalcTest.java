@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -8,11 +8,13 @@ class TicketCalcTest {
 
 	@Test
 	void nonWednesdayPrices() {
-		fail("TBA");
+		int totalCost = 0;
+		assertEquals(18, totalCost);
 	}
 
 	void wednesdayPrices() {
-		fail("TBA");
+		int totalCost = 0;
+		assertEquals(16, totalCost);
 	}
 
 }
